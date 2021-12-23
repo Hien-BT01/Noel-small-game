@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        background-image: url("https://wallpapercave.com/wp/wp2077521.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      .box {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+      }
+      .box.left {
+        left: 40%;
+      }
+      .box.right {
+        right: 30%;
+      }
+      .btn {
+        padding: 10px 14px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        text-transform: capitalize;
+        font-weight: 700;
+        color: #fefefe;
+      }
+      .btn:hover {
+        opacity: 0.85;
+      }
+      .btn.yes {
+        background: #44b744;
+      }
+      .btn.no {
+        background-color: red;
+      }
+      .proposal {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        min-height: 300px;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fefefe47;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #f3eaea59 inset;
+      }
+      .pop-up {
+        color: #333;
+        min-height: 250px;
+        max-width: 600px;
+        background: #fefefe;
+        width: 100%;
+        position: absolute;
+        top: -100%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        z-index: 100;
+        border-radius: 6px;
+        transition: all 5s linear;
+      }
+      .pop-up h2 {
+        border-bottom: 1px solid #e5d9d98c;
+        margin: 0;
+        padding: 10px 0 10px 15px;
+        color: #44b744;
+      }
+      .pop-up h2 span{
+        color: #eb3b3b;
+      }
+      .description{
+          background-image: url("https://wallpapertag.com/wallpaper/full/7/4/6/562864-christmas-snow-wallpaper-1920x1080-for-tablet.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+      .detail iframe{
+          max-width: 100%;
+          object-fit: cover;
+          pointer-events: none;
+      }
+      .show{
+          top: 50%;
+      }
+      .disappear{
+          display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pop-up" id="pop-up">
+      <h2>Congratulations boizzz: <span>You winner!!!</span></h2>
+      <div class="description">
+        <div class="detail">
+          <iframe
+            src="https://giphy.com/embed/g9582DNuQppxC"
+            width="600"
+            height="270"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="proposal"><h2>Would you be my love?</h2></div>
+    <div class="box left">
+      <button class="btn yes" onclick="showResult()">Yes, come to me!</button>
+    </div>
+    <div class="box right" onmouseover="goAway(event)">
+      <button class="btn no">No, fuck off</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
