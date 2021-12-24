@@ -10,11 +10,12 @@ function goAway(event){
 
 
 
-function showResult(){
+function showResult(event){
     const popUp = document.querySelector("#pop-up");
-    popUp.classList.add("show");
-
     const button = document.querySelector(".no")
-
+    const audio = document.querySelector("audio")
+    audio.play();
+    document.body.style.backgroundImage = "url('https://thuthuatnhanh.com/wp-content/uploads/2020/03/anh-dong-tuyet-roi-dem-noel.gif')"
+    popUp.classList.add("show");
     button.classList.add("disappear")
 }
